@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctv41tftgt4ul"]
+
+[ext_resource type="Texture2D" uid="uid://cgk4ahxtk2ewb" path="res://Sprites/kenney_pixel-shmup/Ships/ship_0000.png" id="1_0s1uf"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Ship0000" type="Sprite2D" parent="."]
+position = Vector2(471, 212)
+texture = ExtResource("1_0s1uf")
