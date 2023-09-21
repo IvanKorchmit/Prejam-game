@@ -7,3 +7,5 @@
 [node name="Ship0000" type="Sprite2D" parent="."]
 position = Vector2(471, 212)
 texture = ExtResource("1_0s1uf")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="Ship0000"]
