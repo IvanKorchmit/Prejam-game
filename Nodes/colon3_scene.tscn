@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dga4dlg16sk6k"]
+
+[ext_resource type="PackedScene" uid="uid://mb46pdelgaf0" path="res://Nodes/plane.tscn" id="1_cspg1"]
+[ext_resource type="PackedScene" uid="uid://dhpvli78a2ay3" path="res://Nodes/selection.tscn" id="2_wre3g"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_vlw31"]
+vertices = PackedVector2Array(1209, -116, 1149, 680, -255, 736, -134, -53)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-134, -53, -255, 736, 1149, 680, 1209, -116)])
+
+[node name="Prototype" type="Node2D"]
+
+[node name="Plane" parent="." instance=ExtResource("1_cspg1")]
+
+[node name="Plane2" parent="." instance=ExtResource("1_cspg1")]
+position = Vector2(114, 87)
+
+[node name="Plane3" parent="." instance=ExtResource("1_cspg1")]
+position = Vector2(44, 52)
+
+[node name="Selection" parent="." instance=ExtResource("2_wre3g")]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_vlw31")
