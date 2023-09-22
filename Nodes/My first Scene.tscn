@@ -1,26 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://ctv41tftgt4ul"]
+[gd_scene load_steps=4 format=3 uid="uid://ctv41tftgt4ul"]
 
-[ext_resource type="Texture2D" uid="uid://cgk4ahxtk2ewb" path="res://Sprites/kenney_pixel-shmup/Ships/ship_0000.png" id="1_0s1uf"]
-[ext_resource type="Script" path="res://Scripts/CharacterScript.gd" id="1_e2svj"]
-[ext_resource type="Texture2D" uid="uid://cp38a1wvk81lm" path="res://Sprites/kenney_pixel-shmup/Tiles/tile_0056.png" id="3_o3r2w"]
-
-[sub_resource type="ConcavePolygonShape2D" id="ConcavePolygonShape2D_s3e50"]
+[ext_resource type="PackedScene" uid="uid://mb46pdelgaf0" path="res://Nodes/character.tscn" id="1_hqco0"]
+[ext_resource type="PackedScene" uid="uid://d18n6kj0e7g2f" path="res://Nodes/Tilemap.tscn" id="1_vo51i"]
+[ext_resource type="PackedScene" uid="uid://bcswacm6iq4lm" path="res://Nodes/camera.tscn" id="3_x8o1p"]
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-script = ExtResource("1_e2svj")
+[node name="Tilemap" parent="." instance=ExtResource("1_vo51i")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("ConcavePolygonShape2D_s3e50")
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_hqco0")]
 
-[node name="Blue ship" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(374, 171)
-texture = ExtResource("1_0s1uf")
-
-[node name="NavigationLink2D" type="NavigationLink2D" parent="CharacterBody2D"]
-
-[node name="Tile0056" type="Sprite2D" parent="."]
-position = Vector2(328, 209)
-texture = ExtResource("3_o3r2w")
+[node name="MainCamera" parent="." instance=ExtResource("3_x8o1p")]
+script = null
