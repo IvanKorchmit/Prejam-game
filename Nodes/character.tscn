@@ -12,4 +12,7 @@ script = ExtResource("1_4lqav")
 shape = SubResource("ConcavePolygonShape2D_s3e50")
 
 [node name="Blue ship" type="Sprite2D" parent="."]
+position = Vector2(374, 171)
 texture = ExtResource("2_dxbxv")
+
+[node name="NavigationLink2D" type="NavigationLink2D" parent="."]
